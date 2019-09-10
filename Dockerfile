@@ -17,7 +17,7 @@ FROM ubuntu:18.04
 EXPOSE 123/udp
 
 ENTRYPOINT [ "dumb-init", "--", "docker-entrypoint.sh" ]
-CMD        [ "dnsmasq", "-k", "--log-facility=-" ]
+CMD        [ "dnsmasq", "-k", "-q", "-8=-" ]
 
 # Prepare APT dependencies
 RUN set -ex \
