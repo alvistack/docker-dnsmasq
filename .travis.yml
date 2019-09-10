@@ -1,0 +1,33 @@
+---
+
+dist: xenial
+
+language: minimal
+
+services: docker
+
+before_install:
+  - docker version
+  - docker info
+
+install:
+  - export IMAGE=$(echo $TRAVIS_REPO_SLUG | sed 's/\/docker-/\//g')
+  - mkdir -p ~/.docker
+  - git clone https://github.com/docker-library/official-images.git ~/.docker/official-images
+
+script:
+  - travis_wait 120 sudo ./scripts/run-tests.sh
+
+after_success:
+  - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+  - |
+    if [[ -n "$TRAVIS_TAG" ]]; then
+      docker tag "$IMAGE" "$IMAGE":"$TRAVIS_TAG"
+      docker push "$IMAGE":"$TRAVIS_TAG"
+    elif [[ "$TRAVIS_BRANCH" =~ master ]]; then
+      docker tag "$IMAGE" "$IMAGE":latest
+      docker push "$IMAGE":latest
+    else
+      docker tag "$IMAGE" "$IMAGE":"$TRAVIS_BRANCH"
+      docker push "$IMAGE":"$TRAVIS_BRANCH"
+    fi
