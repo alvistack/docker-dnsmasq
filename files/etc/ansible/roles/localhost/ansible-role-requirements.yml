@@ -19,3 +19,6 @@
 
 - name: dumb-init
   src: https://github.com/alvistack/ansible-role-dumb-init/archive/master.tar.gz
+
+- name: gosu
+  src: https://github.com/alvistack/ansible-role-gosu/archive/master.tar.gz

@@ -18,6 +18,7 @@
   remote_user: root
   roles:
     - role: dumb-init
+    - role: gosu
 
 - hosts: all
   remote_user: root
