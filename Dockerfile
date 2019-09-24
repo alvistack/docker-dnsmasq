@@ -14,6 +14,11 @@
 
 FROM ubuntu:18.04
 
+ENV LANG   "C.UTF-8"
+ENV LC_ALL "C.UTF-8"
+ENV SHELL  "/bin/bash"
+ENV TZ     "UTC"
+
 EXPOSE 123/udp
 
 ENTRYPOINT [ "dumb-init", "--", "docker-entrypoint.sh" ]
