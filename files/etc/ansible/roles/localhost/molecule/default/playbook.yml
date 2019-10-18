@@ -30,3 +30,4 @@
   roles:
     - role: dnsmasq
       dnsmasq_resolv_file: "/etc/resolv.conf"
+    - role: localhost
