@@ -24,7 +24,7 @@ Start Dnsmasq:
 
     # Pull latest image
     docker pull alvistack/dnsmasq
-
+    
     # Run as detach
     docker run \
         -itd \
@@ -32,7 +32,7 @@ Start Dnsmasq:
         --name dnsmasq \
         --publish 53:53/udp \
         alvistack/dnsmasq
-
+    
     # Run with custom /etc/dnsmasq.conf
     docker run \
         -itd \
