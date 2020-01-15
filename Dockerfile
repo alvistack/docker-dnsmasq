@@ -21,7 +21,7 @@ ENV TZ     "UTC"
 
 EXPOSE 123/udp
 
-ENTRYPOINT [ "dumb-init", "--", "docker-entrypoint.sh" ]
+ENTRYPOINT [ "tini", "-g", "--", "docker-entrypoint.sh" ]
 CMD        [ "dnsmasq", "-k", "-q", "--log-facility=-" ]
 
 # Hotfix for en_US.utf8 locale
