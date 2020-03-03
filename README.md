@@ -11,12 +11,17 @@ Learn more about Dnsmasq: <http://www.thekelleys.org.uk/dnsmasq/doc.html>
 
 ## Supported Tags and Respective `Dockerfile` Links
 
-  - [`latest` (master/Dockerfile)](https://github.com/alvistack/docker-dnsmasq/blob/master/Dockerfile)
-  - [`2.79` (2.79/Dockerfile)](https://github.com/alvistack/docker-dnsmasq/blob/2.79/Dockerfile)
+  - [`2.79`, `latest`](https://github.com/alvistack/docker-dnsmasq/blob/master/molecule/2.79/Dockerfile.j2)
 
 ## Overview
 
 This Docker container makes it easy to get an instance of Dnsmasq up and running.
+
+Based on [Official Ubuntu Docker Image](https://hub.docker.com/_/ubuntu/) with some minor hack:
+
+  - Minimized `Dockerfile` for meta data definition
+  - Provision by Ansible and Molecule Docker driver in single layer
+  - Handle `ENTRYPOINT` with [tini](https://github.com/krallin/tini)
 
 ### Quick Start
 

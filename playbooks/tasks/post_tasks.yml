@@ -14,24 +14,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-galaxy_info:
-  role_name: localhost
-  author: Wong Hoi Sing Edison <hswong3i@pantarei-design.com>
-  description: Dummy Ansible Role
-  company: PantaRei Design
-  license: Apache License 2.0
-  min_ansible_version: 2.9
-  platforms:
-    - name: Ubuntu
-      versions:
-        - xenial
-        - bionic
-    - name: EL
-      versions:
-        - 7
-    - name: opensuse
-      versions:
-        - 15
-  galaxy_tags:
-    - system
-dependencies: []
+- name: flush cache
+  shell: |
+    set -o pipefail
+    rm -rf /var/lib/apt/lists/*
+  args:
+    executable: "/bin/bash"
+  changed_when: false
+  ignore_errors: true
