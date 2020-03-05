@@ -13,22 +13,3 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
-namespace: alvistack
-name: docker-dnsmasq
-description: Docker Image Packaging for Dnsmasq
-
-version: VERSION
-readme: README.md
-license: Apache-2.0
-
-repository: https://github.com/alvistack/docker-dnsmasq
-documentation: https://github.com/alvistack/docker-dnsmasq
-homepage: https://github.com/alvistack/docker-dnsmasq
-issues: https://github.com/alvistack/docker-dnsmasq/issues
-
-dependencies: {}
-tags:
-  - system
-authors:
-  - Wong Hoi Sing Edison <hswong3i@pantarei-design.com>
