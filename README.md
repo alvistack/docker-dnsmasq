@@ -1,6 +1,6 @@
 # Docker Image Packaging for Dnsmasq
 
-[![Travis](https://img.shields.io/travis/alvistack/docker-dnsmasq.svg)](https://travis-ci.org/alvistack/docker-dnsmasq)
+[![Travis](https://img.shields.io/travis/com/alvistack/docker-dnsmasq.svg)](https://travis-ci.com/alvistack/docker-dnsmasq)
 [![GitHub release](https://img.shields.io/github/release/alvistack/docker-dnsmasq.svg)](https://github.com/alvistack/docker-dnsmasq/releases)
 [![GitHub license](https://img.shields.io/github/license/alvistack/docker-dnsmasq.svg)](https://github.com/alvistack/docker-dnsmasq/blob/master/LICENSE)
 [![Docker Pulls](https://img.shields.io/docker/pulls/alvistack/dnsmasq.svg)](https://hub.docker.com/r/alvistack/dnsmasq/)
@@ -57,7 +57,7 @@ The `latest` tag matches the most recent [GitHub Release](https://github.com/alv
 
 ### `alvistack/dnsmasq:<version>`
 
-The version tags are rolling release rebuild by [Travis](https://travis-ci.org/alvistack/docker-dnsmasq) in weekly basis. Thus using these tags will ensure you are running the latest packages provided by the base image project.
+The version tags are rolling release rebuild by [Travis](https://travis-ci.com/alvistack/docker-dnsmasq) in weekly basis. Thus using these tags will ensure you are running the latest packages provided by the base image project.
 
 ## License
 
