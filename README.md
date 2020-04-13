@@ -11,7 +11,7 @@ Learn more about Dnsmasq: <http://www.thekelleys.org.uk/dnsmasq/doc.html>
 
 ## Supported Tags and Respective `Dockerfile` Links
 
-  - [`2.79`, `latest`](https://github.com/alvistack/docker-dnsmasq/blob/master/molecule/2.79/Dockerfile.j2)
+  - [`2.80`, `latest`](https://github.com/alvistack/docker-dnsmasq/blob/master/molecule/2.80/Dockerfile.j2)
 
 ## Overview
 
