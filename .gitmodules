@@ -1,7 +1,3 @@
-[submodule "roles/bootstrap"]
-	path = roles/bootstrap
-	url = https://github.com/alvistack/ansible-role-bootstrap.git
-	branch = develop
 [submodule "roles/dnsmasq"]
 	path = roles/dnsmasq
 	url = https://github.com/alvistack/ansible-role-dnsmasq.git
