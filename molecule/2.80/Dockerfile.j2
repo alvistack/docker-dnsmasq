@@ -43,5 +43,5 @@ RUN set -ex \
 EXPOSE 53
 EXPOSE 53/udp
 
-ENTRYPOINT [ "tini", "-g", "--", "docker-entrypoint.sh" ]
+ENTRYPOINT [ "catatonit", "-g", "--", "docker-entrypoint.sh" ]
 CMD        [ "dnsmasq", "-k", "-q", "--log-facility=-" ]

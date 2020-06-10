@@ -1,9 +1,15 @@
 # Docker Image Packaging for Dnsmasq
 
-## 2.79-XalvistackY - TBC
+## 2.80-XalvistackY - TBC
 
 ### Major Changes
 
+## 2.80-4alvistack7 - 2020-06-10
+
+### Major Changes
+
+  - Revamp `create`, `side_effect`, `verify` and `destroy` logic
+  - Replace `tini` with `catatonit`
   - Rename `post_tasks.yml` as `side_effect.yml`
   - Upgrade base image to Ubuntu 20.04
 
