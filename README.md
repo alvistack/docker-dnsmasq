@@ -11,7 +11,7 @@ Learn more about Dnsmasq: <http://www.thekelleys.org.uk/dnsmasq/doc.html>
 
 ## Supported Tags and Respective Packer Template Links
 
-  - [`2.80`, `latest`](https://github.com/alvistack/docker-dnsmasq/blob/master/packer/2.80/packer.json)
+  - [`2.80`, `latest`](https://github.com/alvistack/docker-dnsmasq/blob/master/packer/docker-2.80/packer.json)
 
 ## Overview
 
