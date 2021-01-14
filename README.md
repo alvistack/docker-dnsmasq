@@ -1,9 +1,9 @@
 # Docker Image Packaging for Dnsmasq
 
-[![Gitlab pipeline status](https://img.shields.io/gitlab/pipeline/alvistack/docker-dnsmasq/master)](https://gitlab.com/alvistack/docker-dnsmasq/-/pipelines)
+[![GitLab pipeline status](https://img.shields.io/gitlab/pipeline/alvistack/docker-dnsmasq/master)](https://gitlab.com/alvistack/docker-dnsmasq/-/pipelines)
 [![GitHub release](https://img.shields.io/github/release/alvistack/docker-dnsmasq.svg)](https://github.com/alvistack/docker-dnsmasq/releases)
 [![GitHub license](https://img.shields.io/github/license/alvistack/docker-dnsmasq.svg)](https://github.com/alvistack/docker-dnsmasq/blob/master/LICENSE)
-[![Docker Pulls](https://img.shields.io/docker/pulls/alvistack/dnsmasq.svg)](https://hub.docker.com/r/alvistack/dnsmasq/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/alvistack/dnsmasq-2.80.svg)](https://hub.docker.com/r/alvistack/dnsmasq-2.80)
 
 Dnsmasq provides network infrastructure for small networks: DNS, DHCP, router advertisement and network boot.
 
@@ -11,7 +11,8 @@ Learn more about Dnsmasq: <http://www.thekelleys.org.uk/dnsmasq/doc.html>
 
 ## Supported Tags and Respective Packer Template Links
 
-  - [`2.80`, `latest`](https://github.com/alvistack/docker-dnsmasq/blob/master/packer/docker-2.80/packer.json)
+  - [`alvistack/dnsmasq-2.80`](https://hub.docker.com/r/alvistack/dnsmasq-2.80)
+      - [`packer/docker-2.80/packer.json`](https://github.com/alvistack/docker-dnsmasq/blob/master/packer/docker-2.80/packer.json)
 
 ## Overview
 
@@ -50,13 +51,13 @@ Start Dnsmasq:
 
 ## Versioning
 
-### `alvistack/dnsmasq:latest`
+### `YYYYMMDD.Y.Z`
 
-The `latest` tag matches the most recent [GitHub Release](https://github.com/alvistack/docker-dnsmasq/releases) of this repository. Thus using `alvistack/dnsmasq:latest` or `alvistack/dnsmasq` will ensure you are running the most up to date stable version of this image.
+Release tags could be find from [GitHub Release](https://github.com/alvistack/docker-dnsmasq/releases) of this repository. Thus using these tags will ensure you are running the most up to date stable version of this image.
 
-### `alvistack/dnsmasq:<version>`
+### `YYYYMMDD.0.0`
 
-The version tags are rolling release rebuild by [Travis](https://travis-ci.com/alvistack/docker-dnsmasq) in weekly basis. Thus using these tags will ensure you are running the latest packages provided by the base image project.
+Version tags ended with `.0.0` are rolling release rebuild by [GitLab pipeline](https://gitlab.com/alvistack/docker-dnsmasq/-/pipelines) in weekly basis. Thus using these tags will ensure you are running the latest packages provided by the base image project.
 
 ## License
 
