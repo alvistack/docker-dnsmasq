@@ -28,7 +28,7 @@ Based on [Official Ubuntu Docker Image](https://hub.docker.com/_/ubuntu/) with s
 Start Dnsmasq:
 
     # Pull latest image
-    docker pull alvistack/dnsmasq
+    docker pull alvistack/dnsmasq-2.80
     
     # Run as detach
     docker run \
@@ -36,7 +36,7 @@ Start Dnsmasq:
         --cap-add NET_ADMIN \
         --name dnsmasq \
         --publish 53:53/udp \
-        alvistack/dnsmasq
+        alvistack/dnsmasq-2.80
     
     # Run with custom /etc/dnsmasq.conf
     docker run \
@@ -45,7 +45,7 @@ Start Dnsmasq:
         --name dnsmasq \
         --publish 53:53/udp \
         --volume /etc/dnsmasq.conf:/etc/dnsmasq.conf \
-        alvistack/dnsmasq
+        alvistack/dnsmasq-2.80
 
 **Success**. Dnsmasq is now available on port `53/udp`.
 
