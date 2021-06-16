@@ -4,7 +4,9 @@
 [![GitHub release](https://img.shields.io/github/release/alvistack/docker-dnsmasq.svg)](https://github.com/alvistack/docker-dnsmasq/releases)
 [![GitHub license](https://img.shields.io/github/license/alvistack/docker-dnsmasq.svg)](https://github.com/alvistack/docker-dnsmasq/blob/master/LICENSE)
 [![Docker Pulls](https://img.shields.io/docker/pulls/alvistack/dnsmasq-2.80.svg)](https://hub.docker.com/r/alvistack/dnsmasq-2.80)
+
 Dnsmasq provides network infrastructure for small networks: DNS, DHCP, router advertisement and network boot.
+
 Learn more about Dnsmasq: <http://www.thekelleys.org.uk/dnsmasq/doc.html>
 
 ## Supported Tags and Respective Packer Template Links
@@ -15,6 +17,7 @@ Learn more about Dnsmasq: <http://www.thekelleys.org.uk/dnsmasq/doc.html>
 ## Overview
 
 This Docker container makes it easy to get an instance of Dnsmasq up and running.
+
 Based on [Official Ubuntu Docker Image](https://hub.docker.com/_/ubuntu/) with some minor hack:
 
   - Packaging by Packer Docker builder and Ansible provisioner in single layer
@@ -23,23 +26,27 @@ Based on [Official Ubuntu Docker Image](https://hub.docker.com/_/ubuntu/) with s
 ### Quick Start
 
 Start Dnsmasq:
-\# Pull latest image
-docker pull alvistack/dnsmasq-2.80
-\# Run as detach
-docker run   
-\-itd   
-\--cap-add NET\_ADMIN   
-\--name dnsmasq   
-\--publish 53:53/udp   
-alvistack/dnsmasq-2.80
-\# Run with custom /etc/dnsmasq.conf
-docker run   
-\-itd   
-\--cap-add NET\_ADMIN   
-\--name dnsmasq   
-\--publish 53:53/udp   
-\--volume /etc/dnsmasq.conf:/etc/dnsmasq.conf   
-alvistack/dnsmasq-2.80
+
+    # Pull latest image
+    docker pull alvistack/dnsmasq-2.80
+    
+    # Run as detach
+    docker run \
+        -itd \
+        --cap-add NET_ADMIN \
+        --name dnsmasq \
+        --publish 53:53/udp \
+        alvistack/dnsmasq-2.80
+    
+    # Run with custom /etc/dnsmasq.conf
+    docker run \
+        -itd \
+        --cap-add NET_ADMIN \
+        --name dnsmasq \
+        --publish 53:53/udp \
+        --volume /etc/dnsmasq.conf:/etc/dnsmasq.conf \
+        alvistack/dnsmasq-2.80
+
 **Success**. Dnsmasq is now available on port `53/udp`.
 
 ## Versioning
