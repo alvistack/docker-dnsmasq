@@ -3,7 +3,7 @@
 <img src="/alvistack.svg" width="75" alt="AlviStack">
 
 [![GitLab pipeline status](https://img.shields.io/gitlab/pipeline/alvistack/docker-dnsmasq/master)](https://gitlab.com/alvistack/docker-dnsmasq/-/pipelines)
-[![GitHub release](https://img.shields.io/github/release/alvistack/docker-dnsmasq.svg)](https://github.com/alvistack/docker-dnsmasq/releases)
+[![GitHub tag](https://img.shields.io/github/tag/alvistack/docker-dnsmasq.svg)](https://github.com/alvistack/docker-dnsmasq/tags)
 [![GitHub license](https://img.shields.io/github/license/alvistack/docker-dnsmasq.svg)](https://github.com/alvistack/docker-dnsmasq/blob/master/LICENSE)
 [![Docker Pulls](https://img.shields.io/docker/pulls/alvistack/dnsmasq-2.80.svg)](https://hub.docker.com/r/alvistack/dnsmasq-2.80)
 
@@ -55,7 +55,7 @@ Start Dnsmasq:
 
 ### `YYYYMMDD.Y.Z`
 
-Release tags could be find from [GitHub Release](https://github.com/alvistack/docker-dnsmasq/releases) of this repository. Thus using these tags will ensure you are running the most up to date stable version of this image.
+Release tags could be find from [GitHub Release](https://github.com/alvistack/docker-dnsmasq/tags) of this repository. Thus using these tags will ensure you are running the most up to date stable version of this image.
 
 ### `YYYYMMDD.0.0`
 
