@@ -4,9 +4,20 @@
 
 set -euxo pipefail
 
-# Prepend executable if command starts with an option
+# Prepend executable if command starts with an option.
 if [ "${1:0:1}" = '-' ]; then
     set -- dnsmasq "$@"
+fi
+
+# Modify Ansible inventory with active hostname.
+if [ "$(id -u)" = '0' ]; then
+    _HOSTNAME="$(hostname -s)"
+    sed -i "s/localhost/$_HOSTNAME/g" /etc/ansible/hosts
+fi
+
+# Verify configuration with Ansible.
+if [ "$1" = 'dnsmasq' ]; then
+    ansible-playbook /etc/ansible/playbooks/verify.yml
 fi
 
 exec "$@"
