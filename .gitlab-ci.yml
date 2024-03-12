@@ -138,24 +138,24 @@ build:dnsmasq-2.86-docker:
   <<: *job-packer-build
   stage: build
   cache:
-    key: "$CI_PIPELINE_ID-dnsmasq-2.86-docker"
+    key: $CI_PIPELINE_ID-dnsmasq-2.86-docker
     paths:
       - packer/*/output-docker
   variables:
-    _IMAGE: "dnsmasq-2.86"
-    _PROVIDER: "docker"
+    _IMAGE: dnsmasq-2.86
+    _PROVIDER: docker
 
 test:dnsmasq-2.86-docker:
   <<: *job-molecule-test
   stage: test
   cache:
-    key: "$CI_PIPELINE_ID-dnsmasq-2.86-docker"
+    key: $CI_PIPELINE_ID-dnsmasq-2.86-docker
     paths:
       - packer/*/output-docker
     policy: pull
   variables:
-    _IMAGE: "dnsmasq-2.86"
-    _PROVIDER: "docker"
+    _IMAGE: dnsmasq-2.86
+    _PROVIDER: docker
   needs:
     - build:dnsmasq-2.86-docker
 
@@ -163,12 +163,12 @@ deploy:dnsmasq-2.86-docker:
   <<: *job-docker-push
   stage: deploy
   cache:
-    key: "$CI_PIPELINE_ID-dnsmasq-2.86-docker"
+    key: $CI_PIPELINE_ID-dnsmasq-2.86-docker
     paths:
       - packer/*/output-docker
     policy: pull
   variables:
-    _IMAGE: "dnsmasq-2.86"
-    _PROVIDER: "docker"
+    _IMAGE: dnsmasq-2.86
+    _PROVIDER: docker
   needs:
     - test:dnsmasq-2.86-docker
