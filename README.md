@@ -9,7 +9,7 @@ tag](https://img.shields.io/github/tag/alvistack/docker-dnsmasq.svg)](https://gi
 [![GitHub
 license](https://img.shields.io/github/license/alvistack/docker-dnsmasq.svg)](https://github.com/alvistack/docker-dnsmasq/blob/master/LICENSE)
 [![Docker
-Pulls](https://img.shields.io/docker/pulls/alvistack/dnsmasq-2.86.svg)](https://hub.docker.com/r/alvistack/dnsmasq-2.86)
+Pulls](https://img.shields.io/docker/pulls/alvistack/dnsmasq-2.90.svg)](https://hub.docker.com/r/alvistack/dnsmasq-2.90)
 
 Dnsmasq provides network infrastructure for small networks: DNS, DHCP,
 router advertisement and network boot.
@@ -19,8 +19,8 @@ Learn more about Dnsmasq:
 
 ## Supported Tags and Respective Packer Template Links
 
--   [`alvistack/dnsmasq-2.86`](https://hub.docker.com/r/alvistack/dnsmasq-2.86)
-    -   [`packer/docker-2.86/packer.json`](https://github.com/alvistack/docker-dnsmasq/blob/master/packer/docker-2.86/packer.json)
+-   [`alvistack/dnsmasq-2.90`](https://hub.docker.com/r/alvistack/dnsmasq-2.90)
+    -   [`packer/docker-2.90/packer.json`](https://github.com/alvistack/docker-dnsmasq/blob/master/packer/docker-2.90/packer.json)
 
 ## Overview
 
@@ -40,7 +40,7 @@ Image](https://hub.docker.com/_/ubuntu/) with some minor hack:
 Start Dnsmasq:
 
     # Pull latest image
-    docker pull alvistack/dnsmasq-2.86
+    docker pull alvistack/dnsmasq-2.90
 
     # Run as detach
     docker run \
@@ -48,7 +48,7 @@ Start Dnsmasq:
         --cap-add NET_ADMIN \
         --name dnsmasq \
         --publish 53:53/udp \
-        alvistack/dnsmasq-2.86
+        alvistack/dnsmasq-2.90
 
     # Run with custom /etc/dnsmasq.conf
     docker run \
@@ -57,7 +57,7 @@ Start Dnsmasq:
         --name dnsmasq \
         --publish 53:53/udp \
         --volume /etc/dnsmasq.conf:/etc/dnsmasq.conf \
-        alvistack/dnsmasq-2.86
+        alvistack/dnsmasq-2.90
 
 **Success**. Dnsmasq is now available on port `53/udp`.
 
